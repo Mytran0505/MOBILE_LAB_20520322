@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">20520322_LAB1</string>
+    <string name="txtTextView1">Row</string>
+    <string name="txtTextView2">Column</string>
+    <string name="txtTextView3">ListView</string>
+    <string name="txtTextView4">GridView</string>
+    <string name="txtGridView1">He\'d have you all unravel at the sound of screams</string>
+    <string name="txtGridView2">Heed not the rabble</string>
+    <string name="txtGridView3">Sound of screams but the</string>
+    <string name="txtGridView4">Who scream</string>
 </resources>

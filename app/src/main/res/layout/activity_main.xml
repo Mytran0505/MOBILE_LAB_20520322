@@ -19,9 +19,9 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="@dimen/textSize"
                 android:textColor="@color/black"
-                android:text="Row" />
+                android:text="@string/txtTextView1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -29,19 +29,19 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="#FF0000" />
+                    android:layout_width="@dimen/width100"
+                    android:layout_height="@dimen/height100"
+                    android:background="@color/red" />
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="#FFFF00" />
+                    android:layout_width="@dimen/width100"
+                    android:layout_height="@dimen/height100"
+                    android:background="@color/yellow" />
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="#00FFCC	" />
+                    android:layout_width="@dimen/width100"
+                    android:layout_height="@dimen/height100"
+                    android:background="@color/light_green" />
 
             </LinearLayout>
 
@@ -49,9 +49,9 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="@dimen/textSize"
                 android:textColor="@color/black"
-                android:text="Column" />
+                android:text="@string/txtTextView2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,28 +59,28 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="#FF0000" />
+                    android:layout_width="@dimen/width100"
+                    android:layout_height="@dimen/height100"
+                    android:background="@color/red" />
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="#FFFF00" />
+                    android:layout_width="@dimen/width100"
+                    android:layout_height="@dimen/height100"
+                    android:background="@color/yellow" />
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:background="#00FFCC	" />
+                    android:layout_width="@dimen/width100"
+                    android:layout_height="@dimen/height100"
+                    android:background="@color/light_green" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="@dimen/textSize"
                 android:textColor="@color/black"
-                android:text="ListView" />
+                android:text="@string/txtTextView3" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -88,20 +88,20 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="@dimen/height100"
                     android:id="@+id/hop1"
-                    android:background="#FF0000"/>
+                    android:background="@color/red"/>
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="@dimen/height100"
                     android:id="@+id/hop2"
-                    android:background="#FFFF00"
+                    android:background="@color/yellow"
                     android:layout_below="@+id/hop1" />
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:background="#00FFCC"
+                    android:layout_height="@dimen/height50"
+                    android:background="@color/light_green"
                     android:layout_below="@+id/hop2" />
             </RelativeLayout>
 
@@ -109,9 +109,9 @@
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="@dimen/textSize"
                 android:textColor="@color/black"
-                android:text="GridView" />
+                android:text="@string/txtTextView4" />
 
             <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
@@ -121,61 +121,61 @@
                 app:rowCount="2"
                 >
                 <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:text="He'd have you all unravel at the"
-                    android:background="#CCFFFF"
-                    android:textSize="20sp"
+                    android:layout_width="@dimen/width180"
+                    android:layout_height="@dimen/height180"
+                    android:text="@string/txtGridView1"
+                    android:background="@color/gridColor1"
+                    android:textSize="@dimen/textSizeGrid"
                     android:textColor="@color/black"
                     app:layout_row="0"
                     app:layout_column="0"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:layout_margin="8dp"
+                    android:paddingLeft="@dimen/pad10"
+                    android:paddingTop="@dimen/pad10"
+                    android:paddingRight="@dimen/pad10"
+                    android:layout_margin="@dimen/pad8"
                     />
                 <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:text="Heed not the rabble"
-                    android:background="#66FFFF"
-                    android:textSize="20sp"
+                    android:layout_width="@dimen/width180"
+                    android:layout_height="@dimen/height180"
+                    android:text="@string/txtGridView2"
+                    android:background="@color/gridColor2"
+                    android:textSize="@dimen/textSizeGrid"
                     android:textColor="@color/black"
                     app:layout_row="0"
                     app:layout_column="1"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:layout_margin="8dp"
+                    android:paddingLeft="@dimen/pad10"
+                    android:paddingTop="@dimen/pad10"
+                    android:paddingRight="@dimen/pad10"
+                    android:layout_margin="@dimen/pad8"
 
                     />
 
                 <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:layout_margin="8dp"
-                    android:background="#00FFFF"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:textSize="20sp"
-                    android:text="Sound of screams but the"
+                    android:layout_width="@dimen/width180"
+                    android:layout_height="@dimen/height180"
+                    android:background="@color/gridColor3"
+                    android:paddingLeft="@dimen/pad10"
+                    android:paddingTop="@dimen/pad10"
+                    android:paddingRight="@dimen/pad10"
+                    android:layout_margin="@dimen/pad8"
+                    android:textSize="@dimen/textSizeGrid"
+                    android:text="@string/txtGridView3"
                     android:textColor="@color/black"
                     app:layout_column="0"
                     app:layout_row="1" />
                 <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:text="Who scream"
-                    android:background="#66CCFF"
-                    android:textSize="20sp"
+                    android:layout_width="@dimen/width180"
+                    android:layout_height="@dimen/height180"
+                    android:text="@string/txtGridView4"
+                    android:background="@color/gridColor4"
+                    android:textSize="@dimen/textSizeGrid"
                     android:textColor="@color/black"
                     app:layout_row="1"
                     app:layout_column="1"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:layout_margin="8dp"
+                    android:paddingLeft="@dimen/pad10"
+                    android:paddingTop="@dimen/pad10"
+                    android:paddingRight="@dimen/pad10"
+                    android:layout_margin="@dimen/pad8"
                     />
             </androidx.gridlayout.widget.GridLayout>
 

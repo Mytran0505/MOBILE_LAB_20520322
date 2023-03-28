@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height100">100dp</dimen>
+    <dimen name="width100">100dp</dimen>
+    <dimen name="textSize">15sp</dimen>
+    <dimen name="textSizeGrid">15sp</dimen>
+    <dimen name="height50">50dp</dimen>
+    <dimen name="height180">180dp</dimen>
+    <dimen name="width180">180sp</dimen>
+    <dimen name="pad10">10dp</dimen>
+    <dimen name="pad8">8dp</dimen>
+</resources>
