@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,27 +19,33 @@
                 android:textColor="@color/black"
                 android:text="@string/txtTextView1" />
 
-            <LinearLayout
+            <TableLayout
+                android:id="@+id/RowLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/RowView">
 
-                <TextView
-                    android:layout_width="@dimen/width100"
-                    android:layout_height="@dimen/height100"
-                    android:background="@color/red" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_width="@dimen/width100"
-                    android:layout_height="@dimen/height100"
-                    android:background="@color/yellow" />
+                    <TextView
+                        android:layout_width="@dimen/width100"
+                        android:layout_height="@dimen/height100"
+                        android:background="@color/red" />
 
-                <TextView
-                    android:layout_width="@dimen/width100"
-                    android:layout_height="@dimen/height100"
-                    android:background="@color/light_green" />
+                    <TextView
+                        android:layout_width="@dimen/width100"
+                        android:layout_height="@dimen/height100"
+                        android:background="@color/yellow" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="@dimen/width100"
+                        android:layout_height="@dimen/height100"
+                        android:background="@color/light_green" />
+                </TableRow>
+            </TableLayout>
 
             <TextView
                 android:id="@+id/textView16"
@@ -53,26 +55,37 @@
                 android:textColor="@color/black"
                 android:text="@string/txtTextView2" />
 
-            <LinearLayout
+            <TableLayout
+                android:id="@+id/ColumnLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ColumnView"
+                android:stretchColumns="0,1" >
+                <TableRow>
 
-                <TextView
-                    android:layout_width="@dimen/width100"
-                    android:layout_height="@dimen/height100"
-                    android:background="@color/red" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="@dimen/width100"
-                    android:layout_height="@dimen/height100"
-                    android:background="@color/yellow" />
+                        <TextView
+                            android:layout_width="@dimen/width100"
+                            android:layout_height="@dimen/height100"
+                            android:background="@color/red" />
 
-                <TextView
-                    android:layout_width="@dimen/width100"
-                    android:layout_height="@dimen/height100"
-                    android:background="@color/light_green" />
-            </LinearLayout>
+                        <TextView
+                            android:layout_width="@dimen/width100"
+                            android:layout_height="@dimen/height100"
+                            android:background="@color/yellow" />
+
+                        <TextView
+                            android:layout_width="@dimen/width100"
+                            android:layout_height="@dimen/height100"
+                            android:background="@color/light_green" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
 
             <TextView
                 android:id="@+id/textView17"
@@ -82,28 +95,43 @@
                 android:textColor="@color/black"
                 android:text="@string/txtTextView3" />
 
-            <RelativeLayout
+            <TableLayout
+                android:id="@+id/ListViewLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ListView">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/height100"
-                    android:id="@+id/hop1"
-                    android:background="@color/red"/>
+                <TableRow>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/height100"
-                    android:id="@+id/hop2"
-                    android:background="@color/yellow"
-                    android:layout_below="@+id/hop1" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/height50"
-                    android:background="@color/light_green"
-                    android:layout_below="@+id/hop2" />
-            </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height100"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:orientation="horizontal"></LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height100"
+                        android:layout_weight="1"
+                        android:background="@color/yellow"
+                        android:orientation="horizontal"></LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height50"
+                        android:layout_weight="1"
+                        android:background="@color/light_green"
+                        android:orientation="horizontal"></LinearLayout>
+                </TableRow>
+            </TableLayout>
 
             <TextView
                 android:id="@+id/textView22"
@@ -113,73 +141,93 @@
                 android:textColor="@color/black"
                 android:text="@string/txtTextView4" />
 
-            <androidx.gridlayout.widget.GridLayout
+            <TableLayout
+                android:id="@+id/GridViewLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                app:columnCount="2"
-                app:rowCount="2"
-                >
-                <TextView
-                    android:layout_width="@dimen/width180"
-                    android:layout_height="@dimen/height180"
-                    android:text="@string/txtGridView1"
-                    android:background="@color/gridColor1"
-                    android:textSize="@dimen/textSizeGrid"
-                    android:textColor="@color/black"
-                    app:layout_row="0"
-                    app:layout_column="0"
-                    android:paddingLeft="@dimen/pad10"
-                    android:paddingTop="@dimen/pad10"
-                    android:paddingRight="@dimen/pad10"
-                    android:layout_margin="@dimen/pad8"
-                    />
-                <TextView
-                    android:layout_width="@dimen/width180"
-                    android:layout_height="@dimen/height180"
-                    android:text="@string/txtGridView2"
-                    android:background="@color/gridColor2"
-                    android:textSize="@dimen/textSizeGrid"
-                    android:textColor="@color/black"
-                    app:layout_row="0"
-                    app:layout_column="1"
-                    android:paddingLeft="@dimen/pad10"
-                    android:paddingTop="@dimen/pad10"
-                    android:paddingRight="@dimen/pad10"
-                    android:layout_margin="@dimen/pad8"
+                android:layout_margin="20dp"
+                android:stretchColumns="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/GridView">
 
-                    />
+                <TableRow android:layout_width="wrap_content">
 
-                <TextView
-                    android:layout_width="@dimen/width180"
-                    android:layout_height="@dimen/height180"
-                    android:background="@color/gridColor3"
-                    android:paddingLeft="@dimen/pad10"
-                    android:paddingTop="@dimen/pad10"
-                    android:paddingRight="@dimen/pad10"
-                    android:layout_margin="@dimen/pad8"
-                    android:textSize="@dimen/textSizeGrid"
-                    android:text="@string/txtGridView3"
-                    android:textColor="@color/black"
-                    app:layout_column="0"
-                    app:layout_row="1" />
-                <TextView
-                    android:layout_width="@dimen/width180"
-                    android:layout_height="@dimen/height180"
-                    android:text="@string/txtGridView4"
-                    android:background="@color/gridColor4"
-                    android:textSize="@dimen/textSizeGrid"
-                    android:textColor="@color/black"
-                    app:layout_row="1"
-                    app:layout_column="1"
-                    android:paddingLeft="@dimen/pad10"
-                    android:paddingTop="@dimen/pad10"
-                    android:paddingRight="@dimen/pad10"
-                    android:layout_margin="@dimen/pad8"
-                    />
-            </androidx.gridlayout.widget.GridLayout>
+                    <LinearLayout
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="@dimen/width180"
+                        android:layout_height="@dimen/height180"
+                        android:background="@color/gridColor1"
+                        android:layout_margin="@dimen/pad8">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/pad10"
+                            android:text="@string/txtGridView1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textSizeGrid"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="@dimen/width180"
+                        android:layout_height="@dimen/height180"
+                        android:background="@color/gridColor2"
+                        android:layout_margin="@dimen/pad8">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/pad10"
+                            android:text="@string/txtGridView2"
+                            android:textSize="@dimen/textSizeGrid"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="@dimen/width180"
+                        android:layout_height="@dimen/height180"
+                        android:background="@color/gridColor3"
+                        android:layout_margin="@dimen/pad8">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/pad10"
+                            android:text="@string/txtGridView3"
+                            android:textSize="@dimen/textSizeGrid"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="@dimen/width180"
+                        android:layout_height="@dimen/height180"
+                        android:background="@color/gridColor4"
+                        android:layout_margin="@dimen/pad8">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/pad10"
+                            android:text="@string/txtGridView4"
+                            android:textSize="@dimen/textSizeGrid"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
 
         </LinearLayout>
     </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
